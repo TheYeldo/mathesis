@@ -129,6 +129,58 @@ export default async function CourseModulePage({
           </div>
         </div>
       </section>
+
+      <section className="section module-homework">
+        <div className="container module-homework-grid">
+          <div className="module-homework-intro">
+            <p className="eyebrow">Практикум 01 из {courseModule.homework}</p>
+            <h2>Домашняя работа<br />к модулю</h2>
+            <p>
+              Задания проверяют не механическое повторение, а способность
+              объяснять, связывать и исследовать математические идеи.
+            </p>
+            <span><Clock3 size={16} /> 30–40 минут</span>
+          </div>
+          <div className="module-homework-tasks">
+            <article>
+              <span>01</span>
+              <div>
+                <small>Понимание</small>
+                <h3>Объясните и разграничьте</h3>
+                <p>
+                  Дайте собственное объяснение темы «{courseModule.topics[0]}».
+                  Приведите один корректный пример и один контрпример, который
+                  показывает границу применимости определения или правила.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <small>Связи</small>
+                <h3>Соедините две идеи</h3>
+                <p>
+                  Составьте и решите задачу, в которой одновременно нужны
+                  «{courseModule.topics[1]}» и «{courseModule.topics[2]}».
+                  Объясните, почему решение нельзя считать полным без каждой из идей.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <small>Исследование</small>
+                <h3>Измените условие</h3>
+                <p>
+                  Возьмите утверждение из темы «{courseModule.topics[3]}», измените
+                  одно условие и сформулируйте гипотезу о результате. Проверьте её
+                  минимум на трёх случаях и запишите вывод.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

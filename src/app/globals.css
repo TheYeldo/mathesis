@@ -1683,6 +1683,92 @@ button {
   color: var(--blue);
 }
 
+.module-homework {
+  background: var(--paper);
+}
+
+.module-homework-grid {
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  align-items: start;
+  gap: 90px;
+}
+
+.module-homework-intro {
+  position: sticky;
+  top: 110px;
+}
+
+.module-homework-intro h2 {
+  margin: 0;
+  font-size: 43px;
+  font-weight: 560;
+  letter-spacing: -.052em;
+  line-height: 1.02;
+}
+
+.module-homework-intro > p:not(.eyebrow) {
+  margin: 20px 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.module-homework-intro > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 620;
+}
+
+.module-homework-tasks {
+  border-top: 1px solid var(--line);
+}
+
+.module-homework-tasks article {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 22px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.module-homework-tasks article > span {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--surface);
+  color: var(--coral);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+}
+
+.module-homework-tasks small {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 720;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.module-homework-tasks h3 {
+  margin: 5px 0 8px;
+  font-size: 20px;
+  font-weight: 620;
+  letter-spacing: -.025em;
+}
+
+.module-homework-tasks p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
 /* Diagnostic */
 .diagnostic-page {
   background: #eef0f7;
@@ -2868,9 +2954,14 @@ button {
   }
 
   .module-hero-grid,
-  .module-syllabus-grid {
+  .module-syllabus-grid,
+  .module-homework-grid {
     grid-template-columns: 1fr;
     gap: 45px;
+  }
+
+  .module-homework-intro {
+    position: static;
   }
 
   .module-start-card {
