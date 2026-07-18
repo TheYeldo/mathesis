@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mathesis
 
-## Getting Started
+Интерактивная учебная платформа по алгебре и геометрии для 7–11 классов.
+Mathesis объясняет математику как связанную систему идей: через визуальные
+модели, короткие разборы, проверяемую практику и домашние задания.
 
-First, run the development server:
+## Что внутри
+
+- полная карта программы 7–11 классов: 61 модуль и 625+ уроков;
+- отдельные страницы модулей по алгебре и геометрии;
+- интерактивный урок о дискриминанте с управляемым графиком параболы;
+- практика с мгновенной проверкой и пояснениями;
+- домашнее задание с подсказками, ответами и сохранением прогресса;
+- диагностический тест с персональной рекомендацией;
+- адаптивный интерфейс для desktop, tablet и mobile;
+- SEO-метаданные и статическая генерация 61 страницы программы.
+
+## Запуск
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Проверки
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Основные маршруты
 
-To learn more about Next.js, take a look at the following resources:
+- `/` — главная и личный учебный маршрут;
+- `/catalog` — полная программа;
+- `/course/[grade]/[subject]/[slug]` — страница модуля;
+- `/diagnostic` — диагностика знаний;
+- `/lesson/quadratic-equations` — интерактивный урок.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Прогресс демонстрационного урока хранится локально в браузере (`localStorage`),
+поэтому для знакомства с платформой не нужна регистрация.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Стек
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 16, React 19, TypeScript, Tailwind CSS 4, Lucide Icons.
